@@ -2,5 +2,7 @@
     "i18n-ally.localesPaths": [
         "public/locales",
         "src/shared/config/i18n"
-    ]
+    ],
+    "typescript.suggestionActions.enabled": false,
+    "javascript.suggestionActions.enabled": false
 }
