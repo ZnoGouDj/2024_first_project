@@ -7,11 +7,13 @@ module.exports = {
     },
     'plugins': [
         '@typescript-eslint',
+        'i18next',
     ],
     'extends': [
         'eslint:recommended',
         'plugin:@typescript-eslint/eslint-recommended',
-        'plugin:@typescript-eslint/recommended'
+        'plugin:@typescript-eslint/recommended',
+        'plugin:i18next/recommended',
     ],
     'parserOptions': {
         'ecmaVersion': 'latest',
@@ -27,6 +29,7 @@ module.exports = {
         // we use 2 spaces to indent our code
         'indent': ['error', 4],
         // we want to avoid extraneous spaces
-        'no-multi-spaces': ['error'], 
+        'no-multi-spaces': ['error'],
+        'i18next/no-literal-string': ['error', {markupOnly: true}]
     },
 };
