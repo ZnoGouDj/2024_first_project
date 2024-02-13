@@ -30,6 +30,17 @@ module.exports = {
         'indent': ['error', 4],
         // we want to avoid extraneous spaces
         'no-multi-spaces': ['error'],
-        'i18next/no-literal-string': ['error', {markupOnly: true}]
+        'i18next/no-literal-string': ['error', {
+            markupOnly: true, 
+            ignoreAttribute: ['data-testid', 'to']
+        }]
     },
+    'overrides': [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            }
+        }
+    ]
 };
