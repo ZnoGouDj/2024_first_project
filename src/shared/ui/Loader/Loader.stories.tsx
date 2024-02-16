@@ -7,7 +7,7 @@ const meta: Meta<typeof Loader> = {
     title: 'shared/Loader',
     component: Loader,
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
     },
     tags: ['autodocs'],
     decorators: [
@@ -25,6 +25,7 @@ type Story = StoryObj<typeof Loader>;
 export const Normal: Story = {
     args: {},
 };
+Normal.decorators = [ThemeDecorator(Theme.LIGHT)];
 
 export const Dark: Story = {
     args: {},

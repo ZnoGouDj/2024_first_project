@@ -7,7 +7,7 @@ const meta: Meta<typeof PageError> = {
     title: 'widget/PageError',
     component: PageError,
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
     },
     tags: ['autodocs'],
     decorators: [
@@ -25,6 +25,7 @@ type Story = StoryObj<typeof PageError>;
 export const Light: Story = {
     args: {},
 };
+Light.decorators = [ThemeDecorator(Theme.LIGHT)];
 
 export const Dark: Story = {
     args: {},

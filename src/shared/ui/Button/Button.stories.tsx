@@ -7,7 +7,7 @@ const meta: Meta<typeof Button> = {
     title: 'shared/Button',
     component: Button,
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
     },
     tags: ['autodocs'],
     decorators: [
@@ -41,6 +41,7 @@ export const Outline: Story = {
         theme: ThemeButton.OUTLINE
     },
 };
+Outline.decorators = [ThemeDecorator(Theme.LIGHT)];
 
 export const OutlineDark: Story = {
     args: {

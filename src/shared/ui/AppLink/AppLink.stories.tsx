@@ -2,18 +2,19 @@ import type { Meta, StoryObj } from '@storybook/react';
 import AppLink, { AppLinkTheme } from './AppLink';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
+import { MemoryRouter } from 'react-router-dom';
 
 const meta: Meta<typeof AppLink> = {
     title: 'shared/AppLink',
     component: AppLink,
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
     },
     tags: ['autodocs'],
     decorators: [
         (Story) => (
             <div style={{ margin: '3em' }}>
-                <Story />
+                <MemoryRouter><Story/></MemoryRouter>
             </div>
         ),
     ],

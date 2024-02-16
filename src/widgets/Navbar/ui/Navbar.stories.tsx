@@ -2,18 +2,19 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import Navbar from './Navbar';
+import { MemoryRouter } from 'react-router-dom';
 
 const meta: Meta<typeof Navbar> = {
     title: 'widget/Navbar',
     component: Navbar,
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
     },
     tags: ['autodocs'],
     decorators: [
         (Story) => (
             <div style={{ margin: '3em' }}>
-                <Story />
+                <MemoryRouter initialEntries={['/']}><Story /></MemoryRouter>
             </div>
         ),
     ],
@@ -25,6 +26,7 @@ type Story = StoryObj<typeof Navbar>;
 export const Light: Story = {
     args: {},
 };
+Light.decorators = [ThemeDecorator(Theme.LIGHT)];
 
 export const Dark: Story = {
     args: {},

@@ -7,7 +7,7 @@ const meta: Meta<typeof Sidebar> = {
     title: 'widget/Sidebar',
     component: Sidebar,
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
     },
     tags: ['autodocs'],
     decorators: [
@@ -25,9 +25,9 @@ type Story = StoryObj<typeof Sidebar>;
 export const Light: Story = {
     args: {},
 };
+Light.decorators = [ThemeDecorator(Theme.LIGHT)];
 
 export const Dark: Story = {
     args: {},
 };
-
 Dark.decorators = [ThemeDecorator(Theme.DARK)];

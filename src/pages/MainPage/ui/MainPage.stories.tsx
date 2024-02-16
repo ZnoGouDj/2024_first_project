@@ -7,7 +7,7 @@ const meta: Meta<typeof MainPage> = {
     title: 'pages/MainPage',
     component: MainPage,
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
     },
     tags: ['autodocs'],
     decorators: [
@@ -25,6 +25,7 @@ type Story = StoryObj<typeof MainPage>;
 export const Normal: Story = {
     args: {},
 };
+Normal.decorators = [ThemeDecorator(Theme.LIGHT)];
 
 export const Dark: Story = {
     args: {},
