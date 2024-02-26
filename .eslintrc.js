@@ -33,7 +33,6 @@ module.exports = {
         'i18next/no-literal-string': ['error', {
             markupOnly: true, 
             ignoreAttribute: ['data-testid', 'to'],
-            '@typescript-eslint/no-var-requires': 0,
         }]
     },
     'overrides': [
