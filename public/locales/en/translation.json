@@ -1,10 +1,14 @@
 {
     "Тестовый пример": "Test case",
     "Перевод": "Translate",
+    "Главная страница": "Main page",
     "Язык": "English",
     "Страница не найдена": "Page not found",
     "Произошла непредвиденная ошибка": "Unexpected error occured",
     "Обновить страницу": "Refresh the page",
+    "throw error": "throw error",
     "Переключить": "Switch",
-    "Главная": "Main page"
+    "Главная": "Main page",
+    "О сайте": "About us",
+    "Короткий язык": "En"
 }
