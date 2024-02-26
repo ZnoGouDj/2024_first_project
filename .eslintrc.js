@@ -32,7 +32,8 @@ module.exports = {
         'no-multi-spaces': ['error'],
         'i18next/no-literal-string': ['error', {
             markupOnly: true, 
-            ignoreAttribute: ['data-testid', 'to']
+            ignoreAttribute: ['data-testid', 'to'],
+            '@typescript-eslint/no-var-requires': 0,
         }]
     },
     'overrides': [
