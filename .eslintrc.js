@@ -8,6 +8,7 @@ module.exports = {
     'plugins': [
         '@typescript-eslint',
         'i18next',
+        'react-hooks',
     ],
     'extends': [
         'eslint:recommended',
@@ -33,7 +34,9 @@ module.exports = {
         'i18next/no-literal-string': ['error', {
             markupOnly: true, 
             ignoreAttribute: ['data-testid', 'to'],
-        }]
+        }],
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'error',
     },
     'overrides': [
         {

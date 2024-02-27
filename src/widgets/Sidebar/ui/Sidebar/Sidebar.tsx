@@ -6,10 +6,10 @@ import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
 import { LangSwitcher } from 'shared/ui/LangSwitcher';
 import Button, { ButtonSize, ButtonTheme } from '../../../../shared/ui/Button/Button';
 import AppLink, { AppLinkTheme } from 'shared/ui/AppLink/AppLink';
-import { t } from 'i18next';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import AboutIcon from 'shared/assets/icons/about.svg';
 import MainIcon from 'shared/assets/icons/main.svg';
+import { useTranslation } from 'react-i18next';
 
 interface SidebarProps {
     className?: string;
@@ -20,6 +20,7 @@ const Sidebar = ({className}: SidebarProps) => {
     const onToggle = () => {
         setCollapsed(prev => !prev);
     };
+    const { t } = useTranslation();
 
     return (
         <div data-testid="sidebar" className={classNames(cls.Sidebar, {[cls.collapsed]: collapsed}, [className])}>
