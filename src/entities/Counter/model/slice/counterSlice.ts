@@ -7,7 +7,7 @@ const initialState: CounterSchema = {
 
 export const counterSlice = createSlice({
     name: 'counter',
-    initialState: initialState,
+    initialState,
     reducers: {
         increment: state => {
             state.value += 1;
@@ -15,7 +15,6 @@ export const counterSlice = createSlice({
         decrement: state => {
             state.value -= 1;
         },
-        
     }
 });
 
