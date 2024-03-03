@@ -80,6 +80,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.0",
     "@svgr/webpack": "^6.2.1",
+    "axios": "^0.26.1",
     "babel-loader": "^8.2.3",
     "i18next": "^21.6.11",
     "i18next-browser-languagedetector": "^6.1.3",

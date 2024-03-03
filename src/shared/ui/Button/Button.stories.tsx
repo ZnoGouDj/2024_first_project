@@ -121,3 +121,12 @@ export const SquareSizeXL: Story = {
     },
 };
 SquareSizeXL.decorators = [ThemeDecorator(Theme.LIGHT)];
+
+export const Disabled: Story = {
+    args: {
+        children: '>',
+        theme: ButtonTheme.OUTLINE,
+        disabled: true,
+    },
+};
+Disabled.decorators = [ThemeDecorator(Theme.LIGHT)];

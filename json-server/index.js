@@ -3,9 +3,13 @@ const jsonServer = require('json-server');
 const jwt = require('jsonwebtoken');
 const path = require('path');
 
+var cors = require('cors');
+
 const server = jsonServer.create();
 
 const router = jsonServer.router(path.resolve(__dirname, 'db.json'));
+
+server.use(cors());
 
 // small delay for real API imitation
 server.use(async (req, res, next) => {
