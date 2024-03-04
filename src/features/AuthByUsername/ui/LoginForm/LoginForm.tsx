@@ -10,6 +10,7 @@ import { getLoginState } from '../../model/selectors/getLoginState/getLoginState
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
 import { TextTheme } from 'shared/ui/Text/Text';
 import Text from 'shared/ui/Text/Text';
+import i18n from 'shared/config/i18n/i18n';
 
 interface LoginFormProps {
     className?: string;
@@ -35,7 +36,7 @@ const LoginForm = memo(({className}: LoginFormProps) => {
     return (
         <div className={classNames(cls.LoginForm, {}, [className])}>
             <Text title={t('Форма авторизации')} />
-            {error && <Text text={error} theme={TextTheme.ERROR} />}
+            {error && <Text text={i18n.t('Вы ввели неверный логин или пароль')} theme={TextTheme.ERROR} />}
             <Input
                 autofocus
                 type="text"

@@ -3,6 +3,7 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from 'app/providers/ThemeProvider';
 import Navbar from './Navbar';
 import { MemoryRouter } from 'react-router-dom';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 const meta: Meta<typeof Navbar> = {
     title: 'widget/Navbar',
@@ -26,10 +27,22 @@ type Story = StoryObj<typeof Navbar>;
 export const Light: Story = {
     args: {},
 };
-Light.decorators = [ThemeDecorator(Theme.LIGHT)];
+Light.decorators = [ThemeDecorator(Theme.LIGHT), StoreDecorator({
+    
+})];
 
 export const Dark: Story = {
     args: {},
 };
 
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
+Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
+    
+})];
+
+export const AuthNavbar: Story = {
+    args: {},
+};
+
+AuthNavbar.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
+    user: { authData: {} }
+})];

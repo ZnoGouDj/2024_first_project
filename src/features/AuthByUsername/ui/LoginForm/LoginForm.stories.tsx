@@ -28,8 +28,7 @@ export const Primary: Story = {
         
     },
 };
-Primary.decorators = [ThemeDecorator(Theme.LIGHT)];
-Primary.decorators = [StoreDecorator({
+Primary.decorators = [ThemeDecorator(Theme.LIGHT), StoreDecorator({
     loginForm: { username: '123', password: 'asd' }
 })];
 
@@ -38,8 +37,7 @@ export const withError: Story = {
         
     },
 };
-withError.decorators = [ThemeDecorator(Theme.LIGHT)];
-withError.decorators = [StoreDecorator({
+withError.decorators = [ThemeDecorator(Theme.LIGHT), StoreDecorator({
     loginForm: { username: '123', password: 'asd', error: 'ERROR' }
 })];
 
@@ -48,8 +46,7 @@ export const Loading: Story = {
         
     },
 };
-Loading.decorators = [ThemeDecorator(Theme.LIGHT)];
-Loading.decorators = [StoreDecorator({
+Loading.decorators = [ThemeDecorator(Theme.LIGHT), StoreDecorator({
     loginForm: { isLoading: true }
 })];
 
