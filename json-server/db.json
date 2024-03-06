@@ -15,6 +15,13 @@
       }
     ],
     "profile": {
-      "name": "typicode"
+      "first": "Egor",
+      "last": "Sorokin",
+      "age": 28,
+      "currency": "PLN",
+      "country": "Poland",
+      "city": "Warsaw",
+      "username": "znogoud",
+      "avatar": "https://avatars.githubusercontent.com/u/52937798?v=4"
     }
   }
